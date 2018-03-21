@@ -221,7 +221,8 @@ class handler(requestsManager.asyncRequestHandler):
 				log.warning("**{}** ({}) has been restricted due to missing process list".format(username, userID), "cm")
 
 			# Bake a cake
-			butterCake.bake(self, s)
+			if s.passed:	
+				butterCake.bake(self, s)
 
 			# Save replay
 			if s.passed == True and s.completed == 3:

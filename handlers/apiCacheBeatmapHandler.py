@@ -74,5 +74,5 @@ class handler(requestsManager.asyncRequestHandler):
 			# Send response
 			self.write(json.dumps(data))
 			self.set_header("Content-Type", "application/json")
-			#self.add_header("Access-Control-Allow-Origin", "*")
+			self.add_header("Access-Control-Allow-Origin", "*")
 			self.set_status(statusCode)
